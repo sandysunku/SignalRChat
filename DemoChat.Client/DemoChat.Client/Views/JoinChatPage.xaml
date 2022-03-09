@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoChat.Client.Views.JoinChatPage" xmlns:prism="http://prismlibrary.com" prism:ViewModelLocator.AutowireViewModel="True"
+             BackgroundColor="#0085fe">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Margin="30,60,30,30" Spacing="40" >
+            <Label Text="Welcome to Signal R Chat!" FontSize="Large" TextColor="White" FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Enter your name to join chat"  VerticalOptions="StartAndExpand" 
+                HorizontalOptions="StartAndExpand" TextColor="White" FontSize="Medium"/>
+            <Entry Text="{Binding UserName}"  VerticalOptions="StartAndExpand" TextColor="White"/>
+            <Button Text="Join Chat"  Command="{Binding JoinChatCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
